@@ -1,0 +1,135 @@
+<!Document html>
+<html>
+<head>
+  <title>kakao talk</title>
+  <meta charset="utf-8"name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    a {
+      color:black;
+      text-decoration: none;
+    }
+    h1 {
+      font-size:100%;
+      padding:10px;
+      margin:0;
+      background-color: rgb(77,51,25);
+      color:white;
+    }
+    h2 {
+      font-size:100%;
+      font-weight:bold;
+      margin:0;
+    }
+    h3 {
+      font-size:100%;
+      color:gray;
+      margin:0;
+    }
+    #layout {
+      display:grid;
+      grid-template-columns: 100px 1fr;
+    }
+    #navigation {
+      border-right: 1px solid gray;
+      background-color: rgb(77,51,25);
+      color:white;
+    }
+    #navigation a {
+      color:white;
+    }
+    #search {
+      padding:10px;
+      border-bottom: 1px solid rgb(230, 230, 230);
+      display:grid;
+      grid-template-columns: 20px 1fr 10px;
+      margin-bottom: 10px;
+    }
+    #search input {
+      font-size:13px;
+      border-style:none;
+    }
+    .item {
+      display:grid;
+      grid-template-columns: 60px 1fr 80px;
+    }
+    #chat_info {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      margin-left: 10px;
+    }
+    #time p {
+      font-size:13px;
+      color:gray;
+      text-align: center;
+      margin:0;
+    }
+    #time #new_number {
+      background-color: red;
+      color:white;
+      border-radius: 50%;
+      width:20px;
+      height:20px;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    i {
+      color:gray;
+    }
+    img {
+      border-radius: 50%;
+      width: 50px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>kakaotalk</h1>
+  <div id="layout">
+    <div id="navigation">
+      <a href="friend.html">친구</a><br>
+      <a href="chat.html">채팅</a><br>
+      <a href="config.html">더보기</a><br>
+      알림<br>
+      메뉴<br>
+    </div>
+    <div id="contents">
+      <div id="search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="채팅방 이름, 참여자 검색">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div id="list">
+        <div class="item">
+          <img src="gakki.jpeg">
+          <div id="chat_info">
+            <h2>chat title</h2>
+            <h3>채팅 내용</h3>
+          </div>
+          <div id="time">
+            <p>오후 09:54</p>
+            <p id="new_number">1</p>
+          </div>
+        </div>
+        <div class="item">
+          <img src="gakki.jpeg">
+          <div id="chat_info">
+            <h2>chat title</h2>
+            <h3>채팅 내용</h3>
+          </div>
+          <div id="time">
+            <p>오후 09:54</p>
+            <p id="new_number">1</p>
+          </div>
+        </div>
+        <div class="item">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
