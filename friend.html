@@ -3,27 +3,41 @@
 <head>
   <title>kakao talk</title>
   <meta charset="utf-8">
-  <style>
-    a {
-      color:black;
-      text-decoration: none;
-    }
-    h1 {
-      font-size: 100%;
-      text-align: center;
-    }
-    body {
-      background-color: yellow;
-    }
-  </style>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>
-    <h1>친구</h1>
-  </p>
-  <p>
-    <li><a href="friend.html" style="color:red">친구</a></li>
-    <li><a href="chat.html">채팅</a></li>
-    <li><a href="config.html">설정</a></li>
+  <h1>kakaotalk</h1>
+  <div id="layout">
+    <div id="navigation">
+      <a href="friend.html"><i class="material-icons">person</i></a>
+      <a href="chat.html"><i class="material-icons">arrow_forward</i></a>
+      <a href="config.html"><i class="material-icons">local_airport</i></a>
+      <a href="alarm.html"><i class="material-icons">home</i></a>
+      <a href="menu.html"><i class="material-icons">menu</i></a>
+    </div>
+    <div id="contents">
+      <div id="search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="이름검색">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div id="list">
+        <div class="item">
+          <img src="gakki.jpeg">
+            <div class="name">
+              이름
+            </div>
+          <span id="profile_message">
+            새 일
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
 </body>
 </html>
