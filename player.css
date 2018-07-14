@@ -7,16 +7,23 @@ body {
   grid-template-columns: 400px 1fr;
 }
 .player {
-  background-color: rgb(242,204,255);
   text-align: center;
   color: white;
   text-shadow: gray 1px 2px;
+  background-image: url('gakki.jpeg');
+  background-color: rgba(255,255,255,0.6);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-blend-mode:lighten;
 }
+
 @media (max-width:700px) {
   .web_player {
     display: block;
   }
 }
+
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
@@ -39,10 +46,12 @@ body {
   font-weight: bold;
   margin: 0;
   text-align: left;
+  opacity: 1;
 }
 #song_title {
   font-size: 40px;
   margin-bottom: 0;
+  opacity: 1;
 }
 #singer {
   margin:0;
@@ -51,4 +60,5 @@ body {
   margin: 10px;
   border-radius: 10%;
   width: 200px;
+  opacity: 1;
 }
