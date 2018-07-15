@@ -1,7 +1,6 @@
 body {
   margin:0;
 }
-
 .web_player {
   display: grid;
   grid-template-columns: 400px 1fr;

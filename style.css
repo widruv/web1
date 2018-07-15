@@ -19,6 +19,15 @@
     color:gray;
     margin:0;
   }
+  .title {
+    display: grid;
+    grid-template-columns: 1fr 30px;
+    background-color: rgb(77,51,25);
+  }
+  #sign_out {
+    margin: auto;
+    font-size: 150%;
+  }
   #layout {
     display:grid;
     grid-template-columns: 70px 1fr;

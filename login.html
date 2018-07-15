@@ -7,8 +7,21 @@
   </head>
   <body>
     <img src="kakao_logo.jpg" width="300px"><br>
-    <input type="text" name="id_input" placeholder="id"><br>
-    <input type="text" name="password_input" placeholder="password"><br>
-    <input type="button" id="login_button" name="login_button" value="login">
+    <form class="login" action="friend.html" method="post">
+      <input type="text" id="id_input" placeholder="id"><br>
+      <input type="text" id="password_input" placeholder="password"><br>
+    </form>
+
+    <input type="button" id="login_button" name="login_button" value="login" onclick="
+      if (document.querySelector('#id_input').value === 'admin'
+        || document.querySelector('#password_input').value === 'admin')
+      {
+        document.querySelector('.login').submit();
+      }
+      else
+      {
+        alert('login failed');
+      }
+    ">
   </body>
 </html>
