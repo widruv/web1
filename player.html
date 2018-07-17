@@ -5,8 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>genie</title>
     <link rel="stylesheet" href="player.css">
+    <script>
+      function showPlayList(self)
+      {
+        var playList = ['rpg / sekai no owari', 'koi / hoshino gen'];
+        for (var i=0; i < playList.length; ++i)
+        {
+          var a = document.createElement("a");
+          var list = document.createElement("li");
+          var node = document.createTextNode(""+playList[i]);
+          list.appendChild(node);
+          a.appendChild(list);
+          a.style = "cursor:pointer;"
+          a.onclick = function() {
+            document.getElementById('audio').play();
+          }
+          document.getElementById('play_list').appendChild(a);
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body onload="showPlayList(this);">
     <div class="web_player">
       <div class="player">
         <p id="genie">genie</p>
@@ -14,24 +33,19 @@
         <p id="singer">SEKAI NO OWARI</p>
         <img src="gakki.jpeg" id="cover_image">
         <p>소라와 아오쿠 스미 와타리 </p>
-        <audio controls="controls" draggable="true">
+        <audio id="audio" controls="controls" draggable="true">
+          <source src="music/eva.mp3" type="audio/mpeg"/>
         </audio>
       </div>
       <div class="list">
         <div class="tab">
-          <button class="tab_list" onmouseover="
-            this.style.backgroundColor='#ccc';
-          "
-          onmouseout="this.style.backgroundColor='white';
-          "
-          >재생목록</button>
-          <button class="tab_list" onmouseover="
-            this.style.backgroundColor='#ccc';
-          "
-          onmouseout="this.style.backgroundColor='white';
-          ">마이뮤직</button>
+          <button class="tab_list" onmouseover="this.style.backgroundColor='#ccc';"
+            onmouseout="this.style.backgroundColor='white';">재생목록</button>
+          <button class="tab_list" onmouseover="this.style.backgroundColor='#ccc';"
+            onmouseout="this.style.backgroundColor='white';">마이뮤직</button>
         </div>
-
+        <ul id="play_list">
+        </ul>
       </div>
     </div>
   </body>

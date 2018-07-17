@@ -3,17 +3,18 @@ body {
 }
 .web_player {
   display: grid;
-  grid-template-columns: 400px 1fr;
+  grid-template-columns: 1fr 3fr;
+  overflow: hidden;
 }
 .player {
   text-align: center;
   color: white;
   text-shadow: gray 1px 2px;
   background-image: url('gakki.jpeg');
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255,255,255,0.7);
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  height: 100%;
   background-blend-mode:lighten;
 }
 
@@ -22,7 +23,12 @@ body {
     display: block;
   }
 }
-
+ul {
+  scroll-behavior: smooth;
+}
+li {
+  list-style: none;
+}
 .tab {
   overflow: hidden;
   border: 1px solid #ccc;
