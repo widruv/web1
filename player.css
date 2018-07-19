@@ -1,26 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   margin:0;
 }
 .web_player {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  overflow: hidden;
+  width: auto;
+  height: auto;
 }
 .player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 100%;
   text-align: center;
   color: white;
   text-shadow: gray 1px 2px;
   background-image: url('gakki.jpeg');
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.3);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  background-blend-mode:lighten;
+  background-blend-mode:saturation;
+  overflow: hidden;
 }
-
-@media (max-width:700px) {
-  .web_player {
-    display: block;
+.list {
+  position: absolute;
+  top:0;
+  left: 500px;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.tab {
+  height: 50px;
+  border: 1px solid #ccc;
+}
+#tab_play_list {
+  background-color: inherit;
+  border: none;
+  border-right: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  height: 50px;
+  font-weight: bold;
+  left: 0;
+  right: auto;
+  width: 50%;
+  position: absolute;
+}
+#tab_my_music {
+  background-color: inherit;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  height: 50px;
+  right: 0;
+  width: 50%;
+  position: absolute;
+}
+#play_list {
+  overflow: auto;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+}
+#menu {
+  border-top: 1px solid #ccc;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+@media (max-width:900px) {
+  .player {
+    width: 100%;
+    height: 400px;
+  }
+  .list {
+    top: 400px;
+    left: 0;
+    right: 0;
+    height: auto;
   }
 }
 ul {
@@ -29,23 +95,8 @@ ul {
 li {
   list-style: none;
 }
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.tab_list {
-  background-color: inherit;
-  float: left;
-  border: none;
-  border-right: 1px solid #ccc;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-weight: bold;
-}
+
+
 #genie {
   font-size: 20px;
   font-weight: bold;
