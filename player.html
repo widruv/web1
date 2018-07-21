@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>genie</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="player.css">
     <script>
       var PlayList = {
@@ -11,24 +12,54 @@
         show:function(id) {
           var ul = document.createElement("ul");
           for (var i in this.lists) {
-            var a = document.createElement("a");
+
             var list = document.createElement("li");
-            var node = document.createTextNode(PlayList.lists[i].title+ " / "+ PlayList.lists[i].singer);
-            list.appendChild(node);
-            list.style = "list-style: none;"
-            list.style = "border:1px solid #ccc;";
-            a.appendChild(list);
-            a.style = "cursor:pointer;";
+            var check = document.createElement("input");
+            check.type = "checkbox";
+            check.classList.add("select_check");
+            var a = document.createElement("a");
+            a.href = "#";
             a.onclick = function() {
               document.getElementById('audio').play();
             }
-            ul.appendChild(a);
+            a.style = "cursor:pointer;color:black;";
+            a.title = "PlayList.lists[i].title";
+            a.innerHTML = '<span class="title_ellipsis" sort-field="SONG">'
+                        + PlayList.lists[i].title + '</span><br>';
+            a.innerHTML += '<span class="artist_ellipsis" sort-field="ARTIST">'
+                        + PlayList.lists[i].singer + '</span>';
+            var btn_listen = document.createElement('a');
+            btn_listen.classList.add('btn_listen');
+            btn_listen.href = '#';
+            btn_listen.onclick = function() {
+              document.getElementById('audio').play();
+            }
+            btn_listen.innerHTML = '<img src="play.png" width="30px" heigth="30px">';
+            var toggle_btn_box = document.createElement('div');
+            toggle_btn_box.classList.add('toggle_btn_box');
+            var toggle_btn = document.createElement('button');
+            toggle_btn.classList.add('toggle_btn');
+            toggle_btn.innerHTML = 'e';
+            toggle_btn_box.appendChild(toggle_btn);
+            list.appendChild(check);
+            list.appendChild(a);
+            list.appendChild(btn_listen);
+            list.appendChild(toggle_btn_box);
+
+
+            list.style = "list-style: none;"
+            list.style = "border:1px solid #ccc;";
+            list.classList.add('list_item');
+
+
+            ul.appendChild(list);
           }
           document.getElementById(id).appendChild(ul);
         }
       }
 
     </script>
+
   </head>
   <body>
     <div class="web_player">
@@ -54,10 +85,11 @@
             PlayList.show('play_list');
           </script>
         </div>
-        <div id="menu">
+        <div class="toolbar">
           menu
         </div>
       </div>
     </div>
+
   </body>
 </html>
