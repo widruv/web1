@@ -5,15 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>genie</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="player.css">
     <script>
       var PlayList = {
-        lists: [{"title":"rpg", "singer":"sekai no owari"}, {"title":"koi", "singer":"hoshino gen"}],
+        lists: [
+          {"title":"RPG", "singer":"sekai no owari"},
+          {"title":"Rain", "singer":"sekai no owari"},
+          {"title":"Dragon Night", "singer":"sekai no owari"},
+          {"title":"幻の命", "singer":"sekai no owari"},
+          {"title":"Happy End", "singer":"Back Number"},
+          {"title":"himawari", "singer":"Mr.Children"},
+          {"title":"hanabi", "singer":"Mr.Children"},
+          {"title":"tears", "singer":"X-Japan"},
+          {"title":"Soup", "singer":"藤原さくら"},
+          {"title":"好きよ好きよ好きよ", "singer":"藤原さくら"},
+          {"title":"PIKANCHI", "singer":"嵐"},
+          {"title":"WISH", "singer":"嵐"},
+          {"title":"きっと大丈夫", "singer":"嵐"},
+          {"title":"A.RA.SHI", "singer":"嵐"},
+          {"title":"Happiness", "singer":"嵐"},
+          {"title":"Beautiful days", "singer":"嵐"},
+          {"title":"Face Down", "singer":"嵐"},
+          {"title":"Feel Your Breeze", "singer":"V6"},
+          {"title":"恋", "singer":"星野源"}
+      ],
+      }
+      var PlayListWrapper = {
         show:function(id) {
-          var ul = document.createElement("ul");
-          for (var i in this.lists) {
-
+          var ul = document.getElementById('play_list');
+          for (var i in PlayList.lists) {
             var list = document.createElement("li");
+            list.classList.add('list_item');
             var check = document.createElement("input");
             check.type = "checkbox";
             check.classList.add("select_check");
@@ -22,8 +45,6 @@
             a.onclick = function() {
               document.getElementById('audio').play();
             }
-            a.style = "cursor:pointer;color:black;";
-            a.title = "PlayList.lists[i].title";
             a.innerHTML = '<span class="title_ellipsis" sort-field="SONG">'
                         + PlayList.lists[i].title + '</span><br>';
             a.innerHTML += '<span class="artist_ellipsis" sort-field="ARTIST">'
@@ -37,53 +58,48 @@
             btn_listen.innerHTML = '<img src="play.png" width="30px" heigth="30px">';
             var toggle_btn_box = document.createElement('div');
             toggle_btn_box.classList.add('toggle_btn_box');
-            var toggle_btn = document.createElement('button');
-            toggle_btn.classList.add('toggle_btn');
-            toggle_btn.innerHTML = 'e';
-            toggle_btn_box.appendChild(toggle_btn);
+            toggle_btn_box.innerHTML = '<a href="#"><i class="material-icons">menu</i></a>';
             list.appendChild(check);
             list.appendChild(a);
             list.appendChild(btn_listen);
             list.appendChild(toggle_btn_box);
-
-
-            list.style = "list-style: none;"
-            list.style = "border:1px solid #ccc;";
             list.classList.add('list_item');
-
-
+            list.onmouseover = function() {
+              this.style.backgroundColor = "rgb(233,240,244)";
+              this.children[2].style.opacity = "0.3";
+            }
+            list.onmouseout = function() {
+              this.style.backgroundColor = "white";
+              this.children[2].style.opacity = "0";
+            }
             ul.appendChild(list);
           }
           document.getElementById(id).appendChild(ul);
         }
       }
-
     </script>
-
   </head>
-  <body>
+  <body onload="PlayListWrapper.show('play_list_wrapper')">
     <div class="web_player">
       <div class="player">
         <p id="genie">genie</p>
         <p id="song_title">RPG</p>
         <p id="singer">SEKAI NO OWARI</p>
         <img src="gakki.jpeg" id="cover_image">
-        <p>소라와 아오쿠 스미 와타리 </p>
+        <p class="lyrics" id="first_line">空は青く澄み渡り</p>
+        <p class="lyrics" id="second_line">海を目指して歩く</p>
         <audio id="audio" controls="controls" draggable="true">
           <source src="music/eva.mp3" type="audio/mpeg"/>
         </audio>
       </div>
       <div class="list">
         <div class="tab">
-          <button id="tab_play_list" onmouseover="this.style.backgroundColor='#ccc';"
-            onmouseout="this.style.backgroundColor='white';">재생목록</button>
-          <button id="tab_my_music" onmouseover="this.style.backgroundColor='#ccc';"
-            onmouseout="this.style.backgroundColor='white';">마이뮤직</button>
+          <button id="tab_play_list">재생목록</button>
+          <button id="tab_my_music">마이뮤직</button>
         </div>
-        <div id="play_list">
-          <script>
-            PlayList.show('play_list');
-          </script>
+        <div id="play_list_wrapper">
+          <ul id="play_list">
+          </ul>
         </div>
         <div class="toolbar">
           menu
