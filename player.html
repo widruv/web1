@@ -7,74 +7,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="player.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="play_lists.js"></script>
+    <script src="play_list_wrapper.js"></script>
     <script>
-      var PlayList = {
-        lists: [
-          {"title":"RPG", "singer":"sekai no owari"},
-          {"title":"Rain", "singer":"sekai no owari"},
-          {"title":"Dragon Night", "singer":"sekai no owari"},
-          {"title":"幻の命", "singer":"sekai no owari"},
-          {"title":"Happy End", "singer":"Back Number"},
-          {"title":"himawari", "singer":"Mr.Children"},
-          {"title":"hanabi", "singer":"Mr.Children"},
-          {"title":"tears", "singer":"X-Japan"},
-          {"title":"Soup", "singer":"藤原さくら"},
-          {"title":"好きよ好きよ好きよ", "singer":"藤原さくら"},
-          {"title":"PIKANCHI", "singer":"嵐"},
-          {"title":"WISH", "singer":"嵐"},
-          {"title":"きっと大丈夫", "singer":"嵐"},
-          {"title":"A.RA.SHI", "singer":"嵐"},
-          {"title":"Happiness", "singer":"嵐"},
-          {"title":"Beautiful days", "singer":"嵐"},
-          {"title":"Face Down", "singer":"嵐"},
-          {"title":"Feel Your Breeze", "singer":"V6"},
-          {"title":"恋", "singer":"星野源"}
-      ],
-      }
-      var PlayListWrapper = {
-        show:function(id) {
-          var ul = document.getElementById('play_list');
-          for (var i in PlayList.lists) {
-            var list = document.createElement("li");
-            list.classList.add('list_item');
-            var check = document.createElement("input");
-            check.type = "checkbox";
-            check.classList.add("select_check");
-            var a = document.createElement("a");
-            a.href = "#";
-            a.onclick = function() {
-              document.getElementById('audio').play();
-            }
-            a.innerHTML = '<span class="title_ellipsis" sort-field="SONG">'
-                        + PlayList.lists[i].title + '</span><br>';
-            a.innerHTML += '<span class="artist_ellipsis" sort-field="ARTIST">'
-                        + PlayList.lists[i].singer + '</span>';
-            var btn_listen = document.createElement('a');
-            btn_listen.classList.add('btn_listen');
-            btn_listen.href = '#';
-            btn_listen.onclick = function() {
-              document.getElementById('audio').play();
-            }
-            btn_listen.innerHTML = '<img src="play.png" width="30px" heigth="30px">';
-            var toggle_btn_box = document.createElement('div');
-            toggle_btn_box.classList.add('toggle_btn_box');
-            toggle_btn_box.innerHTML = '<a href="#"><i class="material-icons">menu</i></a>';
-            list.appendChild(check);
-            list.appendChild(a);
-            list.appendChild(btn_listen);
-            list.appendChild(toggle_btn_box);
-            list.classList.add('list_item');
-            list.onmouseover = function() {
-              this.style.backgroundColor = "rgb(233,240,244)";
-              this.children[2].style.opacity = "0.3";
-            }
-            list.onmouseout = function() {
-              this.style.backgroundColor = "white";
-              this.children[2].style.opacity = "0";
-            }
-            ul.appendChild(list);
-          }
-          document.getElementById(id).appendChild(ul);
+      var updateLyrics = function(self) {
+        if (self.currentTime >=0 && self.currentTime < 5) {
+          $('#first_line').html(Lyrics.lyric[0].lines[0]);
+          $('#second_line').html(Lyrics.lyric[0].lines[1]);
+        }
+        else {
+          $('#first_line').html(Lyrics.lyric[0].lines[1]);
         }
       }
     </script>
@@ -86,10 +29,12 @@
         <p id="song_title">RPG</p>
         <p id="singer">SEKAI NO OWARI</p>
         <img src="gakki.jpeg" id="cover_image">
-        <p class="lyrics" id="first_line">空は青く澄み渡り</p>
-        <p class="lyrics" id="second_line">海を目指して歩く</p>
-        <audio id="audio" controls="controls" draggable="true">
-          <source src="music/eva.mp3" type="audio/mpeg"/>
+        <div class="lyrics_main">
+          <span class="lyrics" id="first_line"></span>
+          <span class="lyrics" id="second_line"></span>
+        </div>
+        <audio id="audio" controls="controls" draggable="true" ontimeupdate="updateLyrics(this);">
+          <source id="mp3_src" src="music/eva.mp3" type="audio/mpeg"/>
         </audio>
       </div>
       <div class="list">
@@ -108,4 +53,5 @@
     </div>
 
   </body>
+
 </html>
