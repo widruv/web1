@@ -117,10 +117,15 @@ a {
   position: relative;
 }
 .lyrics {
-  font-size: 130%;
   display: block;
 }
-
+#first_line {
+  font-size: 130%;
+  margin-bottom: 10px;
+}
+#second_line {
+  font-size: 100%;
+}
 .btn_listen {
   position:absolute;
   top: 15%;

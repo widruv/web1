@@ -12,13 +12,27 @@
     <script src="play_list_wrapper.js"></script>
     <script>
       var updateLyrics = function(self) {
+        var currentTime = self.currentTime;
+        for (var line in Lyrics.lyric[0].lines) {
+          if (parseInt(Lyrics.lyric[0].lines[line].start) <= currentTime
+            && parseInt(Lyrics.lyric[0].lines[line].end) >= currentTime) {
+              $('#first_line').html(Lyrics.lyric[0].lines[line].lyric);
+              console.log(Lyrics.lyric[0].lines.length);
+              if (line != Lyrics.lyric[0].lines.length) {
+                console.log(line+1);
+                $('#second_line').html(Lyrics.lyric[0].lines[parseInt(line)+1].lyric);
+              }
+          }
+        }
+        /*
         if (self.currentTime >=0 && self.currentTime < 5) {
-          $('#first_line').html(Lyrics.lyric[0].lines[0]);
-          $('#second_line').html(Lyrics.lyric[0].lines[1]);
+          $('#first_line').html(Lyrics.lyric[0].lines[0].lyric);
+          $('#second_line').html(Lyrics.lyric[0].lines[1].lyric);
         }
         else {
-          $('#first_line').html(Lyrics.lyric[0].lines[1]);
+          $('#first_line').html(Lyrics.lyric[0].lines[1].lyric);
         }
+        */
       }
     </script>
   </head>

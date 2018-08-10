@@ -26,8 +26,10 @@ var PlayLists = {
 var Lyrics = {
   lyric : [
     {"title": "RPG", "lines": [
-      "空は青く澄み渡り",
-      "海を目指して歩く"
+      {"lyric":"空は青く澄み渡り","start":"0","end":"5"},
+      {"lyric":"海を目指して歩く","start":"5","end":"10"},
+      {"lyric":"怖いものなんてない","start":"10","end":"15"},
+      {"lyric":"僕らはもう1人じゃない","start":"15","end":"20"}
     ]}
   ]
 }
