@@ -14,17 +14,14 @@ var PlayListWrapper = {
         var audio = $('#audio');
         var index = $(this).attr('music_id');
         $('#mp3_src').attr('src', 'music/'+index+'.mp3');
+        $('#mp3_src').attr('music_id', index);
         audio[0].pause();
         audio[0].load();
         audio[0].oncanplaythrough = audio[0].play();
-        $('#cover_image').attr('src', 'music/Folder.jpg?timestamp='+Math.random());
-        $('.player').css('background-image', 'url(music/Folder.jpg)');
-
-        // for (var i in Lyrics.lyric[index].lines)
-        // {
-        //   console.log(Lyrics.lyric[index].lines[i]);
-        // }
-
+        $('#cover_image').attr('src', 'album/'+$(this).attr('music_id')+'.jpg?timestamp='+Math.random());
+        $('.player').css('background-image', 'url(album/'+$(this).attr('music_id')+'.jpg)');
+        $('#song_title').html(PlayLists.lists[$(this).attr('music_id')].title);
+        $('#singer').html(PlayLists.lists[$(this).attr('music_id')].singer);
       }
       a.innerHTML = '<span class="title_ellipsis" sort-field="SONG">'
                   + PlayLists.lists[i].title + '</span><br>';
@@ -36,13 +33,15 @@ var PlayListWrapper = {
       $(btn_listen).attr('music_id', i);
       btn_listen.onclick = function() {
         var audio = $('#audio');
-
         $('#mp3_src').attr('src', 'music/'+$(this).attr('music_id')+'.mp3');
+        $('#mp3_src').attr('music_id', i);
         audio[0].pause();
         audio[0].load();
         audio[0].oncanplaythrough = audio[0].play();
-        $('#cover_image').attr('src', 'music/Folder.jpg?timestamp='+Math.random());
-        $('.player').css('background-image', 'url(music/Folder.jpg)');
+        $('#cover_image').attr('src', 'album/'+$(this).attr('music_id')+'.jpg?timestamp='+Math.random());
+        $('.player').css('background-image', 'url(album/'+$(this).attr('music_id')+'.jpg)');
+        $('#song_title').html(PlayLists.lists[$(this).attr('music_id')].title);
+        $('#singer').html(PlayLists.lists[$(this).attr('music_id')].singer);
       }
       btn_listen.innerHTML = '<img src="play.png" width="30px" heigth="30px">';
       var toggle_btn_box = document.createElement('div');
