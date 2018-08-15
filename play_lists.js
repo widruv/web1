@@ -27,6 +27,7 @@ var PlayLists = {
 
 var Lyrics = {
   lyric : [
+    //0
     {"title": "RPG", "lines": [
       {"lyric":"空は青く澄み渡り","start":"0","end":"10"},
       {"lyric":"海を目指して歩く","start":"10","end":"13"},
@@ -79,6 +80,7 @@ var Lyrics = {
       {"lyric":"怖くても大丈夫","start":"269","end":"272"},
       {"lyric":"僕らはもう1人じゃない","start":"272","end":"286"}
     ]},
+    //1
     {"title": "残酷な天使", "lines": [
       {"lyric":"残酷な天使のように","start":"0","end":"10"},
       {"lyric":"少年よ神話になれ","start":"10","end":"26"},
@@ -114,6 +116,113 @@ var Lyrics = {
       {"lyric":"思い出を裏切るなら","start":"231","end":"235"},
       {"lyric":"この宇宙を抱いて輝く","start":"235","end":"239"},
       {"lyric":"少年よ神話になれ!","start":"239","end":"248"}
-    ]}
+    ]},
+    //2
+    {"title": "残酷な天使", "lines": []},
+    //3
+    {"title": "残酷な天使", "lines": []},
+    //4
+    {"title": "残酷な天使", "lines": []},
+    //5
+    {"title": "残酷な天使", "lines": []},
+    //6
+    {"title": "残酷な天使", "lines": []},
+    //7
+    {"title": "残酷な天使", "lines": []},
+    //8
+    {"title": "残酷な天使", "lines": [
+      {"lyric":"何處に行けばいい貴方と離れて","start":"0","end":"44"},
+      {"lyric":"今は過ぎ去った時流に問い卦けて","start":"44","end":"58"},
+      {"lyric":"長すぎた夜に旅立ちを夢見た","start":"58","end":"71"},
+      {"lyric":"異國の空見つめて孤獨を抱きしめた","start":"71","end":"83"},
+      {"lyric":"流れゐ淚を時代の風に重ねて","start":"83","end":"96"},
+      {"lyric":"終わらない貴女の吐息を感じて","start":"96","end":"107"},
+      {"lyric":"Dry your tears with love","start":"107","end":"114"},
+      {"lyric":"Dry your tears with love","start":"114","end":"137"},
+      {"lyric":"Loneliness your silent whisper","start":"137","end":"144"},
+      {"lyric":"Fills a river of tears through the night","start":"144","end":"150"},
+      {"lyric":"Memory you never let me cry","start":"150","end":"156"},
+      {"lyric":"And you, You never said goodbye","start":"156","end":"163"},
+      {"lyric":"Sometimes our tears blinded the love","start":"163","end":"170"},
+      {"lyric":"We lost our dreams along the way","start":"170","end":"176"},
+      {"lyric":"But I never thought you'd trade your soul to the fates","start":"176","end":"181"},
+      {"lyric":"Never thought you'd leave me alone","start":"181","end":"192"},
+      {"lyric":"Time through the rain has set me free","start":"192","end":"199"},
+      {"lyric":"Sands of time will keep your memory","start":"199","end":"205"},
+      {"lyric":"Love everlasting fades away","start":"205","end":"212"},
+      {"lyric":"Alive within your breathless heart","start":"212","end":"216"},
+      {"lyric":"Dry your tears with love","start":"216","end":"222"},
+      {"lyric":"Dry your tears with love","start":"222","end":"282"},
+      {"lyric":"流れる淚を時代の風に重ねて","start":"282","end":"295"},
+      {"lyric":"終わらない悲しみを靑い薔薇に變えて","start":"295","end":"306"},
+      {"lyric":"Dry your tears with love","start":"306","end":"312"},
+      {"lyric":"Dry your tears with love","start":"312","end":"317"},
+      {"lyric":"流れる淚を時代の風に重ねて","start":"317","end":"330"},
+      {"lyric":"終わらない貴方の吐息を感じて","start":"330","end":"341"},
+      {"lyric":"Dry your tears with love","start":"341","end":"347"},
+      {"lyric":"Dry your tears with love","start":"347","end":"354"},
+      {"lyric":"Dry your tears with love","start":"354","end":"360"},
+      {"lyric":"Dry your tears with love","start":"360","end":"423"}
+    ]},
+    //9
+    {"title": "残酷な天使", "lines": []},
+    //10
+    {"title": "残酷な天使", "lines": []},
+    //11
+    {"title": "残酷な天使", "lines": []},
+    //12
+    {"title": "残酷な天使", "lines": []},
+    //13
+    {"title": "残酷な天使", "lines": []},
+    //14
+    {"title": "残酷な天使", "lines": []},
+    //15
+    {"title": "残酷な天使", "lines": []},
+    //16
+    {"title": "残酷な天使", "lines": []},
+    //17
+    {"title": "残酷な天使", "lines": []},
+    //18
+    {"title": "残酷な天使", "lines": []},
+    //19
+    {"title": "恋", "lines": [
+      {"lyric":"営みの街が暮れたら色めき","start":"0","end":"20"},
+      {"lyric":"風たちは運ぶわカラスと人々の群れ","start":"20","end":"26"},
+      {"lyric":"意味なんかないさ暮らしがあるだけ","start":"26","end":"32"},
+      {"lyric":"ただ腹を空かせて君の元へ帰るんだ","start":"32","end":"38"},
+      {"lyric":"物心ついたらふと見上げて思うことが","start":"38","end":"44"},
+      {"lyric":"この世にいる誰も二人から","start":"44","end":"50"},
+      {"lyric":"胸の中にあるものいつか見えなくなるもの","start":"50","end":"56"},
+      {"lyric":"それは側にいることいつも思い出して","start":"56","end":"62"},
+      {"lyric":"君の中にあるもの距離の中にある鼓動","start":"62","end":"68"},
+      {"lyric":"恋をしたの貴方の","start":"68","end":"71"},
+      {"lyric":"指の混ざり頬の香り","start":"71","end":"75"},
+      {"lyric":"夫婦を超えてゆけ","start":"75","end":"90"},
+      {"lyric":"みにくいと秘めた想いは色づき","start":"90","end":"96"},
+      {"lyric":"白鳥は運ぶわ当たり前を変えながら","start":"96","end":"102"},
+      {"lyric":"恋せずにいられないな似た顔も虚構にも","start":"102","end":"108"},
+      {"lyric":"愛が生まれるのは一人から","start":"108","end":"114"},
+      {"lyric":"胸の中にあるものいつか見えなくなるもの","start":"114","end":"120"},
+      {"lyric":"それは側にいることいつも思い出して","start":"120","end":"126"},
+      {"lyric":"君の中にあるもの距離の中にある鼓動","start":"126","end":"132"},
+      {"lyric":"恋をしたの貴方の","start":"132","end":"135"},
+      {"lyric":"指の混ざり頬の香り","start":"135","end":"139"},
+      {"lyric":"夫婦を超えてゆけ","start":"139","end":"166"},
+      {"lyric":"泣き顔も黙る夜も","start":"166","end":"172"},
+      {"lyric":"揺れる笑顔も","start":"172","end":"175"},
+      {"lyric":"いつまでもいつまでも","start":"175","end":"181"},
+      {"lyric":"胸の中にあるものいつか見えなくなるもの","start":"181","end":"187"},
+      {"lyric":"それは側にいることいつも思い出して","start":"187","end":"193"},
+      {"lyric":"君の中にあるもの距離の中にある鼓動","start":"193","end":"199"},
+      {"lyric":"恋をしたの貴方の","start":"199","end":"202"},
+      {"lyric":"指の混ざり頬の香り","start":"202","end":"205"},
+      {"lyric":"夫婦を超えてゆけ","start":"205","end":"208"},
+      {"lyric":"二人を超えてゆけ","start":"208","end":"211"},
+      {"lyric":"一人を超えてゆけ","start":"211","end":"251"}
+    ]},
+    //20
+    {"title": "残酷な天使", "lines": []},
+    //21
+    {"title": "残酷な天使", "lines": []}
   ]
 }

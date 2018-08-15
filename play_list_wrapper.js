@@ -34,7 +34,7 @@ var PlayListWrapper = {
       btn_listen.onclick = function() {
         var audio = $('#audio');
         $('#mp3_src').attr('src', 'music/'+$(this).attr('music_id')+'.mp3');
-        $('#mp3_src').attr('music_id', i);
+        $('#mp3_src').attr('music_id', $(this).attr('music_id'));
         audio[0].pause();
         audio[0].load();
         audio[0].oncanplaythrough = audio[0].play();
