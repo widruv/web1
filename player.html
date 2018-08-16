@@ -19,7 +19,6 @@
           $('#second_line').html("");
           return;
         }
-
         for (var line in Lyrics.lyric[musicId].lines) {
           if (parseInt(Lyrics.lyric[musicId].lines[line].start) <= currentTime
             && parseInt(Lyrics.lyric[musicId].lines[line].end) >= currentTime) {
@@ -62,6 +61,7 @@
         <audio id="audio" controls="controls" draggable="true" onEnded="nextMusic(this);" ontimeupdate="updateLyrics(this);">
           <source id="mp3_src" src="" type="audio/mpeg"/>
         </audio>
+        <a href="#" onclick="nextMusic();"><img src="fast_forward.png" id="fast_forward"></a>
       </div>
       <div class="list">
         <div class="tab">

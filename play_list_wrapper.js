@@ -1,6 +1,7 @@
 var PlayListWrapper = {
   show:function(id) {
     var ul = document.getElementById('play_list');
+    $('#play_list').empty();
     for (var i in PlayLists.lists) {
       var list = document.createElement("li");
       list.classList.add('list_item');
