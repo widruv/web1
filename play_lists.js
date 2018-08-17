@@ -21,7 +21,8 @@ var PlayLists = {
     {"title":"Feel Your Breeze", "singer":"V6"},
     {"title":"恋", "singer":"星野源"},
     {"title":"One Love", "singer":"嵐"},
-    {"title":"Love so sweet", "singer":"嵐"}
+    {"title":"Love so sweet", "singer":"嵐"},
+    {"title":"世界はそれを愛と呼ぶんだぜ", "singer":"サンボマスター"},
   ]
 }
 
@@ -351,6 +352,8 @@ var Lyrics = {
       {"lyric":"lalala~","start":"238","end":"284"}
     ]},
     //21
-    {"title": "残酷な天使", "lines": []}
+    {"title": "残酷な天使", "lines": []},
+    //22
+    {"title": "世界はそれを愛と呼ぶんだぜ ", "lines": []}
   ]
 }
