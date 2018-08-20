@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="player.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="play_lists.js"></script>
     <script src="play_list_wrapper.js"></script>
@@ -45,6 +46,20 @@
           $('#song_title').html(PlayLists.lists[nextIndex].title);
           $('#singer').html(PlayLists.lists[nextIndex].singer);
       }
+      var changeLyrics = function(self) {
+        if ($('#library_books').attr('status') === 'image') {
+          $('#library_books').attr('status', 'lyrics');
+          $('#library_books').css('color', 'gray');
+          $('#cover_image').css('display', 'none');
+          $('.lyrics').css('display', 'none');
+        }
+        else {
+          $('#library_books').attr('status', 'image');
+          $('#library_books').css('color', '#F0F0F0');
+          $('#cover_image').css('display', 'block');
+          $('.lyrics').css('display', 'block');
+        }
+      }
     </script>
   </head>
   <body onload="PlayListWrapper.show('play_list_wrapper')">
@@ -58,10 +73,13 @@
           <span class="lyrics" id="first_line"></span>
           <span class="lyrics" id="second_line"></span>
         </div>
+        <a href="#" id="library_books" status="image" onclick="changeLyrics();"><i class="material-icons">library_books</i></a>
         <audio id="audio" controls="controls" draggable="true" onEnded="nextMusic(this);" ontimeupdate="updateLyrics(this);">
           <source id="mp3_src" src="" type="audio/mpeg"/>
         </audio>
-        <a href="#" onclick="nextMusic();"><img src="fast_forward.png" id="fast_forward"></a>
+        <a href="#" id="fast_forward" onclick="nextMusic();"><i class="material-icons">fast_forward</i></a>
+      </div>
+      <div class="library">
       </div>
       <div class="list">
         <div class="tab">

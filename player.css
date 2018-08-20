@@ -11,11 +11,16 @@ a {
   cursor:pointer;
   color:black;
 }
+i {
+  text-shadow: none;
+}
+ul {
+  list-style: none;
+}
 .web_player {
   width: auto;
   height: auto;
 }
-
 .player {
   position: absolute;
   top: 0;
@@ -126,6 +131,12 @@ a {
 #second_line {
   font-size: 100%;
 }
+.library {
+  position: absolute;
+  top: 130px;
+  left: 100px;
+  color: white;
+}
 .btn_listen {
   position:absolute;
   top: 15%;
@@ -179,12 +190,21 @@ a {
   top: 500px;
   left: 100px;
 }
+#library_books {
+  position: absolute;
+  top:510px;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+  color: #F0F0F0;
+}
 #fast_forward {
   position: absolute;
   top:510px;
   left: 430px;
   width: 40px;
   height: 40px;
+  color: #F0F0F0;
 }
 @media (max-width:900px) {
   .player {
@@ -232,6 +252,7 @@ a {
   }
   #fast_forward {
     position: absolute;
+    color: #F0F0F0;
     top: 255px;
     left: 330px;
     width: 40px;
