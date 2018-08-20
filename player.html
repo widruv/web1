@@ -15,6 +15,20 @@
       var updateLyrics = function(self) {
         var currentTime = self.currentTime;
         var musicId = $('#mp3_src').attr('music_id');
+        if ($('#library_books').attr('status') === 'lyrics') {
+          showLibrary();
+          for (var line in Lyrics.lyric[musicId].lines) {
+            if (parseInt(Lyrics.lyric[musicId].lines[line].start) <= currentTime
+              && parseInt(Lyrics.lyric[musicId].lines[line].end) >= currentTime) {
+                $('.library_list').each(function(index) {
+                  if (index == line) {
+                    $(this).css({'font-size':'120%', 'font-weight':'bold'});
+                  }
+                });
+            }
+          }
+          return ;
+        }
         if (Lyrics.lyric[musicId].lines.length == 0) {
           $('#first_line').html("실시간 가사를 지원하지 않습니다.");
           $('#second_line').html("");
@@ -54,26 +68,32 @@
           $('#cover_image').css('display', 'none');
           $('.lyrics').css('display', 'none');
           showLibrary();
-          return ;
         }
-        if ($('#library_books').attr('status') === 'lyrics') {
+        else if ($('#library_books').attr('status') === 'lyrics') {
           $('#library_books').attr('status', 'image');
           $('#library_books').css('color', '#F0F0F0');
           $('#cover_image').css('display', 'block');
           $('.lyrics').css('display', 'block');
           hideLibrary();
-          return ;
         }
       }
       var showLibrary = function(self) {
-        var ul = document.createElement("ul");
+        var ul = $("<ul></ul>");
         var musicId = $('#mp3_src').attr('music_id');
         for (var index in Lyrics.lyric[musicId].lines) {
-          var li = document.createElement("li");
-          li.innerHTML = Lyrics.lyric[musicId].lines[index].lyric;
-          ul.appendChild(li);
+          var a = $("<a></a>").attr({start:Lyrics.lyric[musicId].lines[index].start, end:Lyrics.lyric[musicId].lines[index].end, href:'#'});
+          a.css('color','white');
+          var li = $("<li></li>").html(Lyrics.lyric[musicId].lines[index].lyric);
+          li.addClass('library_list');
+          a.append(li);
+          a.click(function(self) {
+            var audio = document.getElementById('audio');
+            audio.currentTime = $(this).attr('start');
+          });
+          ul.append(a);
         }
         $('.library').html(ul);
+        $('.library').css('display','block');
       }
       var hideLibrary = function(self) {
         $('.library').css('display', 'none');
