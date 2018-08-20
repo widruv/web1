@@ -46,19 +46,37 @@
           $('#song_title').html(PlayLists.lists[nextIndex].title);
           $('#singer').html(PlayLists.lists[nextIndex].singer);
       }
+
       var changeLyrics = function(self) {
         if ($('#library_books').attr('status') === 'image') {
           $('#library_books').attr('status', 'lyrics');
           $('#library_books').css('color', 'gray');
           $('#cover_image').css('display', 'none');
           $('.lyrics').css('display', 'none');
+          showLibrary();
+          return ;
         }
-        else {
+        if ($('#library_books').attr('status') === 'lyrics') {
           $('#library_books').attr('status', 'image');
           $('#library_books').css('color', '#F0F0F0');
           $('#cover_image').css('display', 'block');
           $('.lyrics').css('display', 'block');
+          hideLibrary();
+          return ;
         }
+      }
+      var showLibrary = function(self) {
+        var ul = document.createElement("ul");
+        var musicId = $('#mp3_src').attr('music_id');
+        for (var index in Lyrics.lyric[musicId].lines) {
+          var li = document.createElement("li");
+          li.innerHTML = Lyrics.lyric[musicId].lines[index].lyric;
+          ul.appendChild(li);
+        }
+        $('.library').html(ul);
+      }
+      var hideLibrary = function(self) {
+        $('.library').css('display', 'none');
       }
     </script>
   </head>
