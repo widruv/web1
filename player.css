@@ -29,7 +29,6 @@ ul {
   height: 100%;
   text-align: center;
   color: white;
-  text-shadow: gray 1px 2px;
   background-image: url('gakki.jpeg');
   background-color: rgba(0,0,0,0.6);
   background-repeat: no-repeat;
@@ -147,7 +146,11 @@ ul {
   height: 0px;
   border: 0px solid #fff;
 }
-
+.library_list {
+  font-size: 90%;
+  text-shadow: 0 0 2px gray;
+  margin-bottom: 10px;
+}
 .btn_listen {
   position:absolute;
   top: 15%;
