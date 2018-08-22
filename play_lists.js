@@ -538,7 +538,32 @@ var Lyrics = {
       {"lyric":"君を愛し續ける","start":"122","end":"134"}
     ]},
     //13
-    {"title": "残酷な天使", "lines": []},
+    {"title": "きっと大丈夫", "lines": [
+      {"lyric":"When I was driving in that night","start":"0","end":"4"},
+      {"lyric":"氣付けばまだ確かにほら空に twilight","start":"4","end":"6"},
+      {"lyric":"光がなくともないならまだまだ","start":"6","end":"9"},
+      {"lyric":"you shouldn´t cry cry cry","start":"9","end":"10"},
+      {"lyric":"Tell me what u wanna ah ah","start":"10","end":"12"},
+      {"lyric":"weekend gonna make luv ah ah","start":"12","end":"14"},
+      {"lyric":"from monday to sunday every every every day","start":"14","end":"16"},
+      {"lyric":"lucky lucky lucky my life","start":"16","end":"18"},
+      {"lyric":"ラキラキベイブ仕事はラストのオ―マイグル―ヴ","start":"18","end":"22"},
+      {"lyric":"なかなかベイブ今日は樂しい!朝まで!","start":"22","end":"26"},
+      {"lyric":"シャカシャカベイブ氣持ちは八分目","start":"26","end":"29"},
+      {"lyric":"いいじゃない! わるくない! 愛じゃない?","start":"29","end":"34"},
+      {"lyric":"淡い記憶がよみがえたら君が笑ってる","start":"34","end":"42"},
+      {"lyric":"若った季節の足跡は波間にキラキラ消えてゆく","start":"42","end":"49"},
+      {"lyric":"いつも同じメンバ―で語り合ったこの場所に今","start":"49","end":"57"},
+      {"lyric":"バイバイこの景色心に焼き付けて明日へ踏み出そう!","start":"57","end":"65"},
+      {"lyric":"ラキラキベイブ仕事はラストのオ―マイグル―ヴ","start":"65","end":"69"},
+      {"lyric":"なかなかベイブ今日は樂しい!朝まで!","start":"69","end":"73"},
+      {"lyric":"シャカシャカベイブ氣持ちは八分目","start":"73","end":"76"},
+      {"lyric":"いいじゃない! わるくない! 愛じゃない?","start":"76","end":"81"},
+      {"lyric":"ラキラキベイブ勉強はラストのオ―マイグル―ヴ","start":"81","end":"85"},
+      {"lyric":"なかなかベイブ今日も樂しい!朝まで!","start":"85","end":"89"},
+      {"lyric":"シャカシャカベイブ近所のお祭りも","start":"89","end":"92"},
+      {"lyric":"いいじゃない! わるくない! 愛じゃない?","start":"92","end":"97"}
+    ]},
     //14
     {"title": "残酷な天使", "lines": []},
     //15
