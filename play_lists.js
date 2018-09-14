@@ -23,6 +23,7 @@ var PlayLists = {
     {"title":"One Love", "singer":"嵐"},
     {"title":"Love so sweet", "singer":"嵐"},
     {"title":"世界はそれを愛と呼ぶんだぜ", "singer":"サンボマスター"},
+    {"title":"지치지마", "singer":"재은"}
   ]
 }
 
@@ -722,6 +723,7 @@ var Lyrics = {
       {"lyric":"悲しみの夜なんて","start":"267","end":"270"},
       {"lyric":"なかったかのように歌い出すんだぜ","start":"270","end":"288"},
       {"lyric":"世界じゃそれを愛と呼ぶんだぜ","start":"288","end":"321"}
-    ]}
+    ]},
+    {"title": "지치지마", "lines": []}
   ]
 }
