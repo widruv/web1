@@ -24,7 +24,8 @@ var PlayLists = {
     {"title":"Love so sweet", "singer":"嵐"},
     {"title":"世界はそれを愛と呼ぶんだぜ", "singer":"サンボマスター"},
     {"title":"지치지마", "singer":"재은"},
-    {"title":"小さな恋のうた", "singer":"新垣結衣"}
+    {"title":"小さな恋のうた", "singer":"新垣結衣"},
+    {"title":"言葉より大切なもの", "singer":"嵐"}
   ]
 }
 
@@ -731,6 +732,7 @@ var Lyrics = {
       {"lyric":"大事な人ほどすぐそばにいるの","start":"7","end":"13"},
       {"lyric":"ただあなたにだけ屆いて欲しい","start":"13","end":"19"},
       {"lyric":"響け戀の歌","start":"19","end":"35"}
-    ]}
+    ]},
+    {"title": "言葉より大切なもの", "lines": []},
   ]
 }
